@@ -160,12 +160,12 @@ end
     Ho_JPP = H_JPP;
     
     if(JPPflag)
-      fprintf('computing JPP multimodal decomposition...');
-      [W, H_top, H_com, M_top, M_com, OBJHIST] = LTECS(mu,Xtfidf_top, Xtfidf_com, Ho_top, Ho_com, size(Ho_top,1), lambda_top, lambda_com, regl1jpp, epsilon, maxiter, false);
+      %fprintf('computing JPP multimodal decomposition...');
+      %[W, H_top, H_com, M_top, M_com, OBJHIST] = LTECS(mu,Xtfidf_top, Xtfidf_com, Ho_top, Ho_com, size(Ho_top,1), lambda_top, lambda_com, regl1jpp, epsilon, maxiter, false);
       fprintf('[ok]\n');
       
-      %fprintf('[ok]\ncomputing JPP decomposition...');
-      %[W_JPP, H_JPP, M_JPP, OBJHIST] = JPP(Xtfidf_top, Ho_JPP, size(Ho_top,1), lambda, regl1jpp,  epsilon, maxiter, false);
+      fprintf('[ok]\ncomputing JPP decomposition...');
+      [W_JPP, H_JPP, M_JPP, OBJHIST] = JPP(Xtfidf_top, Ho_JPP, size(Ho_top,1), lambda, regl1jpp,  epsilon, maxiter, false);
     end
  
 %     if(numlambda==1)
